@@ -1,0 +1,372 @@
+{
+  "base_url": "https://aquaiceeis26-production.up.railway.app",
+  "started_at": "2026-09-10T05:39:49.768428+00:00",
+  "source": "SIMULATED",
+  "notice": "Application verification only. No measured sensor/FPGA results.",
+  "runs": [
+    {
+      "id": 1,
+      "name": "SIMULATED_RAILWAY_TEST_1000_20260910T053950_20260909",
+      "sample_count": 1000,
+      "source": "SIMULATED",
+      "seed": 20260909,
+      "result": "PASS",
+      "http_ingestion": {
+        "seconds": 3.195889,
+        "batches": 5,
+        "batch_size": 200,
+        "meaning": "HTTP/application timing only; not FPGA throughput"
+      },
+      "statistics": {
+        "sample_count": 1000,
+        "analysis_count": 1000,
+        "source": "SIMULATED"
+      },
+      "csv": {
+        "rows": 1000,
+        "sources": {
+          "SIMULATED": 1000
+        }
+      },
+      "research_package": {
+        "sha256": "28c4a17c8aced0494e6e29c604ce6cd3491a1a7dc93189604b40a5d8b27e1ed6",
+        "dataset_sha256": "63aeba45c9685358067b24609041e8936e0a1911388df305ec22ad28777af017",
+        "members": 12,
+        "verified_hashes": 11,
+        "samples": {
+          "rows": 1000,
+          "sources": {
+            "SIMULATED": 1000
+          }
+        },
+        "bytes": 461862
+      },
+      "status": "LOCKED",
+      "dataset_sha256": "63aeba45c9685358067b24609041e8936e0a1911388df305ec22ad28777af017"
+    },
+    {
+      "id": 2,
+      "name": "SIMULATED_RAILWAY_TEST_10000_20260910T054005_20260910",
+      "sample_count": 10000,
+      "source": "SIMULATED",
+      "seed": 20260910,
+      "result": "RUNNING"
+    }
+  ],
+  "requests": [
+    {
+      "check": "GET /health/",
+      "method": "GET",
+      "path": "/health/",
+      "status": 200,
+      "content_encoding": "identity",
+      "bytes": 34,
+      "result": "PASS",
+      "seconds": 0.711864
+    },
+    {
+      "check": "GET /api/v1/runs/?limit=1",
+      "method": "GET",
+      "path": "/api/v1/runs/?limit=1",
+      "status": 200,
+      "content_encoding": "identity",
+      "bytes": 50,
+      "result": "PASS",
+      "seconds": 0.460562
+    },
+    {
+      "check": "POST /api/v1/runs/",
+      "method": "POST",
+      "path": "/api/v1/runs/",
+      "status": 201,
+      "content_encoding": "gzip",
+      "bytes": 1350,
+      "result": "PASS",
+      "seconds": 0.375578
+    },
+    {
+      "check": "PATCH /api/v1/runs/1/",
+      "method": "PATCH",
+      "path": "/api/v1/runs/1/",
+      "status": 200,
+      "content_encoding": "gzip",
+      "bytes": 1350,
+      "result": "PASS",
+      "seconds": 0.388853
+    },
+    {
+      "check": "Run 1: batch 1",
+      "method": "POST",
+      "path": "/api/v1/samples/batch/",
+      "status": 201,
+      "content_encoding": "gzip",
+      "bytes": 715,
+      "result": "PASS",
+      "seconds": 0.609345
+    },
+    {
+      "check": "Run 1: batch 2",
+      "method": "POST",
+      "path": "/api/v1/samples/batch/",
+      "status": 201,
+      "content_encoding": "gzip",
+      "bytes": 823,
+      "result": "PASS",
+      "seconds": 0.620328
+    },
+    {
+      "check": "Run 1: batch 3",
+      "method": "POST",
+      "path": "/api/v1/samples/batch/",
+      "status": 201,
+      "content_encoding": "gzip",
+      "bytes": 823,
+      "result": "PASS",
+      "seconds": 0.631803
+    },
+    {
+      "check": "Run 1: batch 4",
+      "method": "POST",
+      "path": "/api/v1/samples/batch/",
+      "status": 201,
+      "content_encoding": "gzip",
+      "bytes": 823,
+      "result": "PASS",
+      "seconds": 0.64797
+    },
+    {
+      "check": "Run 1: batch 5",
+      "method": "POST",
+      "path": "/api/v1/samples/batch/",
+      "status": 201,
+      "content_encoding": "gzip",
+      "bytes": 824,
+      "result": "PASS",
+      "seconds": 0.639502
+    },
+    {
+      "check": "PATCH /api/v1/runs/1/",
+      "method": "PATCH",
+      "path": "/api/v1/runs/1/",
+      "status": 200,
+      "content_encoding": "gzip",
+      "bytes": 1377,
+      "result": "PASS",
+      "seconds": 1.418412
+    },
+    {
+      "check": "GET /api/v1/latest/?run_id=1",
+      "method": "GET",
+      "path": "/api/v1/latest/?run_id=1",
+      "status": 200,
+      "content_encoding": "gzip",
+      "bytes": 1429,
+      "result": "PASS",
+      "seconds": 0.399584
+    },
+    {
+      "check": "GET /api/v1/history/?run_id=1&limit=100",
+      "method": "GET",
+      "path": "/api/v1/history/?run_id=1&limit=100",
+      "status": 200,
+      "content_encoding": "gzip",
+      "bytes": 135071,
+      "result": "PASS",
+      "seconds": 0.448494
+    },
+    {
+      "check": "GET /api/v1/history/?run_id=1&downsample=500",
+      "method": "GET",
+      "path": "/api/v1/history/?run_id=1&downsample=500",
+      "status": 200,
+      "content_encoding": "gzip",
+      "bytes": 674874,
+      "result": "PASS",
+      "seconds": 0.632016
+    },
+    {
+      "check": "GET /api/v1/runs/1/stats/",
+      "method": "GET",
+      "path": "/api/v1/runs/1/stats/",
+      "status": 200,
+      "content_encoding": "gzip",
+      "bytes": 8095,
+      "result": "PASS",
+      "seconds": 0.499475
+    },
+    {
+      "check": "GET /api/v1/runs/1/tables/",
+      "method": "GET",
+      "path": "/api/v1/runs/1/tables/",
+      "status": 200,
+      "content_encoding": "gzip",
+      "bytes": 1468,
+      "result": "PASS",
+      "seconds": 0.42415
+    },
+    {
+      "check": "GET /runs/1/",
+      "method": "GET",
+      "path": "/runs/1/",
+      "status": 200,
+      "content_encoding": "gzip",
+      "bytes": 2852,
+      "result": "PASS",
+      "seconds": 0.593326
+    },
+    {
+      "check": "GET /runs/1/paper/",
+      "method": "GET",
+      "path": "/runs/1/paper/",
+      "status": 200,
+      "content_encoding": "gzip",
+      "bytes": 2424,
+      "result": "PASS",
+      "seconds": 0.47857
+    },
+    {
+      "check": "GET /compare/?run_id=1",
+      "method": "GET",
+      "path": "/compare/?run_id=1",
+      "status": 200,
+      "content_encoding": "gzip",
+      "bytes": 2847,
+      "result": "PASS",
+      "seconds": 0.627149
+    },
+    {
+      "check": "GET /system/",
+      "method": "GET",
+      "path": "/system/",
+      "status": 200,
+      "content_encoding": "gzip",
+      "bytes": 2844,
+      "result": "PASS",
+      "seconds": 0.400369
+    },
+    {
+      "check": "GET /api/v1/runs/1/export/",
+      "method": "GET",
+      "path": "/api/v1/runs/1/export/",
+      "status": 200,
+      "content_encoding": "identity",
+      "bytes": 456411,
+      "result": "PASS",
+      "seconds": 0.724053
+    },
+    {
+      "check": "POST /api/v1/runs/1/lock/",
+      "method": "POST",
+      "path": "/api/v1/runs/1/lock/",
+      "status": 200,
+      "content_encoding": "gzip",
+      "bytes": 1552,
+      "result": "PASS",
+      "seconds": 0.571444
+    },
+    {
+      "check": "Run 1: locked metadata modification rejected",
+      "method": "PATCH",
+      "path": "/api/v1/runs/1/",
+      "status": 400,
+      "content_encoding": "identity",
+      "bytes": 93,
+      "result": "PASS",
+      "seconds": 0.822791
+    },
+    {
+      "check": "Run 1: locked sample ingestion rejected",
+      "method": "POST",
+      "path": "/api/v1/samples/",
+      "status": 400,
+      "content_encoding": "identity",
+      "bytes": 96,
+      "result": "PASS",
+      "seconds": 0.420584
+    },
+    {
+      "check": "GET /api/v1/runs/1/research-package/",
+      "method": "GET",
+      "path": "/api/v1/runs/1/research-package/",
+      "status": 200,
+      "content_encoding": "identity",
+      "bytes": 461862,
+      "result": "PASS",
+      "seconds": 0.818814
+    },
+    {
+      "check": "Run 1: repeated canonical package export",
+      "method": "GET",
+      "path": "/api/v1/runs/1/research-package/",
+      "status": 200,
+      "content_encoding": "identity",
+      "bytes": 461862,
+      "result": "PASS",
+      "seconds": 0.815225
+    },
+    {
+      "check": "GET /api/v1/runs/1/",
+      "method": "GET",
+      "path": "/api/v1/runs/1/",
+      "status": 200,
+      "content_encoding": "gzip",
+      "bytes": 1552,
+      "result": "PASS",
+      "seconds": 0.468254
+    },
+    {
+      "check": "POST /api/v1/runs/",
+      "method": "POST",
+      "path": "/api/v1/runs/",
+      "status": 201,
+      "content_encoding": "gzip",
+      "bytes": 1351,
+      "result": "PASS",
+      "seconds": 0.482379
+    },
+    {
+      "check": "PATCH /api/v1/runs/2/",
+      "method": "PATCH",
+      "path": "/api/v1/runs/2/",
+      "status": 200,
+      "content_encoding": "gzip",
+      "bytes": 1351,
+      "result": "PASS",
+      "seconds": 0.376537
+    },
+    {
+      "check": "Run 2: batch 1",
+      "method": "POST",
+      "path": "/api/v1/samples/batch/",
+      "status": 201,
+      "content_encoding": "gzip",
+      "bytes": 1023,
+      "result": "PASS",
+      "seconds": 0.617847
+    },
+    {
+      "check": "Run 2: batch 2",
+      "method": "POST",
+      "path": "/api/v1/samples/batch/",
+      "status": 201,
+      "content_encoding": "gzip",
+      "bytes": 1023,
+      "result": "PASS",
+      "seconds": 0.618127
+    },
+    {
+      "check": "Run 2: batch 3",
+      "method": "POST",
+      "path": "/api/v1/samples/batch/",
+      "result": "FAIL",
+      "seconds": 300.053006
+    }
+  ],
+  "result": "FAIL",
+  "health": {
+    "status": "ok",
+    "database": "ok"
+  },
+  "error": "<urlopen error _ssl.c:1064: The handshake operation timed out>",
+  "finished_at": "2026-09-10T05:45:07.732102+00:00"
+}

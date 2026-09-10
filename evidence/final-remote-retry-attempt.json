@@ -1,0 +1,731 @@
+{
+  "base_url": "https://aquaiceeis26-production.up.railway.app",
+  "started_at": "2026-09-10T05:43:05.022979+00:00",
+  "source": "SIMULATED",
+  "notice": "Application verification only. No measured sensor/FPGA results.",
+  "runs": [
+    {
+      "id": 3,
+      "name": "SIMULATED_RAILWAY_TEST_RETRY_10000_20260910T054305_20260909",
+      "sample_count": 10000,
+      "source": "SIMULATED",
+      "seed": 20260909,
+      "result": "RUNNING",
+      "http_ingestion": {
+        "seconds": 38.331178,
+        "batches": 50,
+        "batch_size": 200,
+        "meaning": "HTTP/application timing only; not FPGA throughput"
+      },
+      "statistics": {
+        "sample_count": 10000,
+        "analysis_count": 10000,
+        "source": "SIMULATED"
+      },
+      "csv": {
+        "rows": 10000,
+        "sources": {
+          "SIMULATED": 10000
+        }
+      }
+    }
+  ],
+  "requests": [
+    {
+      "check": "GET /health/",
+      "method": "GET",
+      "path": "/health/",
+      "status": 200,
+      "content_encoding": "identity",
+      "bytes": 34,
+      "result": "PASS",
+      "seconds": 0.5005
+    },
+    {
+      "check": "GET /api/v1/runs/?limit=1",
+      "method": "GET",
+      "path": "/api/v1/runs/?limit=1",
+      "status": 200,
+      "content_encoding": "gzip",
+      "bytes": 1398,
+      "result": "PASS",
+      "seconds": 0.369416
+    },
+    {
+      "check": "POST /api/v1/runs/",
+      "method": "POST",
+      "path": "/api/v1/runs/",
+      "status": 201,
+      "content_encoding": "gzip",
+      "bytes": 1357,
+      "result": "PASS",
+      "seconds": 0.371735
+    },
+    {
+      "check": "PATCH /api/v1/runs/3/",
+      "method": "PATCH",
+      "path": "/api/v1/runs/3/",
+      "status": 200,
+      "content_encoding": "gzip",
+      "bytes": 1357,
+      "result": "PASS",
+      "seconds": 0.434534
+    },
+    {
+      "check": "Run 3: batch 1",
+      "method": "POST",
+      "path": "/api/v1/samples/batch/",
+      "status": 201,
+      "content_encoding": "gzip",
+      "bytes": 1023,
+      "result": "PASS",
+      "seconds": 0.525338
+    },
+    {
+      "check": "Run 3: batch 2",
+      "method": "POST",
+      "path": "/api/v1/samples/batch/",
+      "status": 201,
+      "content_encoding": "gzip",
+      "bytes": 1023,
+      "result": "PASS",
+      "seconds": 0.572859
+    },
+    {
+      "check": "Run 3: batch 3",
+      "method": "POST",
+      "path": "/api/v1/samples/batch/",
+      "status": 201,
+      "content_encoding": "gzip",
+      "bytes": 1023,
+      "result": "PASS",
+      "seconds": 0.668619
+    },
+    {
+      "check": "Run 3: batch 4",
+      "method": "POST",
+      "path": "/api/v1/samples/batch/",
+      "status": 201,
+      "content_encoding": "gzip",
+      "bytes": 1023,
+      "result": "PASS",
+      "seconds": 0.652224
+    },
+    {
+      "check": "Run 3: batch 5",
+      "method": "POST",
+      "path": "/api/v1/samples/batch/",
+      "status": 201,
+      "content_encoding": "gzip",
+      "bytes": 1023,
+      "result": "PASS",
+      "seconds": 0.563171
+    },
+    {
+      "check": "Run 3: batch 6",
+      "method": "POST",
+      "path": "/api/v1/samples/batch/",
+      "status": 201,
+      "content_encoding": "gzip",
+      "bytes": 1023,
+      "result": "PASS",
+      "seconds": 0.570865
+    },
+    {
+      "check": "Run 3: batch 7",
+      "method": "POST",
+      "path": "/api/v1/samples/batch/",
+      "status": 201,
+      "content_encoding": "gzip",
+      "bytes": 1023,
+      "result": "PASS",
+      "seconds": 0.824572
+    },
+    {
+      "check": "Run 3: batch 8",
+      "method": "POST",
+      "path": "/api/v1/samples/batch/",
+      "status": 201,
+      "content_encoding": "gzip",
+      "bytes": 1023,
+      "result": "PASS",
+      "seconds": 0.670382
+    },
+    {
+      "check": "Run 3: batch 9",
+      "method": "POST",
+      "path": "/api/v1/samples/batch/",
+      "status": 201,
+      "content_encoding": "gzip",
+      "bytes": 1023,
+      "result": "PASS",
+      "seconds": 0.648118
+    },
+    {
+      "check": "Run 3: batch 10",
+      "method": "POST",
+      "path": "/api/v1/samples/batch/",
+      "status": 201,
+      "content_encoding": "gzip",
+      "bytes": 1023,
+      "result": "PASS",
+      "seconds": 0.534163
+    },
+    {
+      "check": "Run 3: batch 11",
+      "method": "POST",
+      "path": "/api/v1/samples/batch/",
+      "status": 201,
+      "content_encoding": "gzip",
+      "bytes": 1023,
+      "result": "PASS",
+      "seconds": 0.613602
+    },
+    {
+      "check": "Run 3: batch 12",
+      "method": "POST",
+      "path": "/api/v1/samples/batch/",
+      "status": 201,
+      "content_encoding": "gzip",
+      "bytes": 1023,
+      "result": "PASS",
+      "seconds": 3.266605
+    },
+    {
+      "check": "Run 3: batch 13",
+      "method": "POST",
+      "path": "/api/v1/samples/batch/",
+      "status": 201,
+      "content_encoding": "gzip",
+      "bytes": 1023,
+      "result": "PASS",
+      "seconds": 0.71925
+    },
+    {
+      "check": "Run 3: batch 14",
+      "method": "POST",
+      "path": "/api/v1/samples/batch/",
+      "status": 201,
+      "content_encoding": "gzip",
+      "bytes": 1023,
+      "result": "PASS",
+      "seconds": 0.731861
+    },
+    {
+      "check": "Run 3: batch 15",
+      "method": "POST",
+      "path": "/api/v1/samples/batch/",
+      "status": 201,
+      "content_encoding": "gzip",
+      "bytes": 1023,
+      "result": "PASS",
+      "seconds": 0.630636
+    },
+    {
+      "check": "Run 3: batch 16",
+      "method": "POST",
+      "path": "/api/v1/samples/batch/",
+      "status": 201,
+      "content_encoding": "gzip",
+      "bytes": 1023,
+      "result": "PASS",
+      "seconds": 0.7149
+    },
+    {
+      "check": "Run 3: batch 17",
+      "method": "POST",
+      "path": "/api/v1/samples/batch/",
+      "status": 201,
+      "content_encoding": "gzip",
+      "bytes": 1023,
+      "result": "PASS",
+      "seconds": 0.573086
+    },
+    {
+      "check": "Run 3: batch 18",
+      "method": "POST",
+      "path": "/api/v1/samples/batch/",
+      "status": 201,
+      "content_encoding": "gzip",
+      "bytes": 1023,
+      "result": "PASS",
+      "seconds": 0.734366
+    },
+    {
+      "check": "Run 3: batch 19",
+      "method": "POST",
+      "path": "/api/v1/samples/batch/",
+      "status": 201,
+      "content_encoding": "gzip",
+      "bytes": 1023,
+      "result": "PASS",
+      "seconds": 0.560147
+    },
+    {
+      "check": "Run 3: batch 20",
+      "method": "POST",
+      "path": "/api/v1/samples/batch/",
+      "status": 201,
+      "content_encoding": "gzip",
+      "bytes": 1023,
+      "result": "PASS",
+      "seconds": 0.532478
+    },
+    {
+      "check": "Run 3: batch 21",
+      "method": "POST",
+      "path": "/api/v1/samples/batch/",
+      "status": 201,
+      "content_encoding": "gzip",
+      "bytes": 1023,
+      "result": "PASS",
+      "seconds": 0.683141
+    },
+    {
+      "check": "Run 3: batch 22",
+      "method": "POST",
+      "path": "/api/v1/samples/batch/",
+      "status": 201,
+      "content_encoding": "gzip",
+      "bytes": 1023,
+      "result": "PASS",
+      "seconds": 0.670537
+    },
+    {
+      "check": "Run 3: batch 23",
+      "method": "POST",
+      "path": "/api/v1/samples/batch/",
+      "status": 201,
+      "content_encoding": "gzip",
+      "bytes": 1023,
+      "result": "PASS",
+      "seconds": 0.596914
+    },
+    {
+      "check": "Run 3: batch 24",
+      "method": "POST",
+      "path": "/api/v1/samples/batch/",
+      "status": 201,
+      "content_encoding": "gzip",
+      "bytes": 1023,
+      "result": "PASS",
+      "seconds": 0.713209
+    },
+    {
+      "check": "Run 3: batch 25",
+      "method": "POST",
+      "path": "/api/v1/samples/batch/",
+      "status": 201,
+      "content_encoding": "gzip",
+      "bytes": 1023,
+      "result": "PASS",
+      "seconds": 0.606565
+    },
+    {
+      "check": "Run 3: batch 26",
+      "method": "POST",
+      "path": "/api/v1/samples/batch/",
+      "status": 201,
+      "content_encoding": "gzip",
+      "bytes": 1023,
+      "result": "PASS",
+      "seconds": 0.977954
+    },
+    {
+      "check": "Run 3: batch 27",
+      "method": "POST",
+      "path": "/api/v1/samples/batch/",
+      "status": 201,
+      "content_encoding": "gzip",
+      "bytes": 1023,
+      "result": "PASS",
+      "seconds": 0.621458
+    },
+    {
+      "check": "Run 3: batch 28",
+      "method": "POST",
+      "path": "/api/v1/samples/batch/",
+      "status": 201,
+      "content_encoding": "gzip",
+      "bytes": 1023,
+      "result": "PASS",
+      "seconds": 0.781395
+    },
+    {
+      "check": "Run 3: batch 29",
+      "method": "POST",
+      "path": "/api/v1/samples/batch/",
+      "status": 201,
+      "content_encoding": "gzip",
+      "bytes": 1023,
+      "result": "PASS",
+      "seconds": 1.812091
+    },
+    {
+      "check": "Run 3: batch 30",
+      "method": "POST",
+      "path": "/api/v1/samples/batch/",
+      "status": 201,
+      "content_encoding": "gzip",
+      "bytes": 1023,
+      "result": "PASS",
+      "seconds": 0.626448
+    },
+    {
+      "check": "Run 3: batch 31",
+      "method": "POST",
+      "path": "/api/v1/samples/batch/",
+      "status": 201,
+      "content_encoding": "gzip",
+      "bytes": 1023,
+      "result": "PASS",
+      "seconds": 0.606238
+    },
+    {
+      "check": "Run 3: batch 32",
+      "method": "POST",
+      "path": "/api/v1/samples/batch/",
+      "status": 201,
+      "content_encoding": "gzip",
+      "bytes": 1023,
+      "result": "PASS",
+      "seconds": 0.728178
+    },
+    {
+      "check": "Run 3: batch 33",
+      "method": "POST",
+      "path": "/api/v1/samples/batch/",
+      "status": 201,
+      "content_encoding": "gzip",
+      "bytes": 1023,
+      "result": "PASS",
+      "seconds": 0.724882
+    },
+    {
+      "check": "Run 3: batch 34",
+      "method": "POST",
+      "path": "/api/v1/samples/batch/",
+      "status": 201,
+      "content_encoding": "gzip",
+      "bytes": 1023,
+      "result": "PASS",
+      "seconds": 0.567042
+    },
+    {
+      "check": "Run 3: batch 35",
+      "method": "POST",
+      "path": "/api/v1/samples/batch/",
+      "status": 201,
+      "content_encoding": "gzip",
+      "bytes": 1023,
+      "result": "PASS",
+      "seconds": 1.529303
+    },
+    {
+      "check": "Run 3: batch 36",
+      "method": "POST",
+      "path": "/api/v1/samples/batch/",
+      "status": 201,
+      "content_encoding": "gzip",
+      "bytes": 1023,
+      "result": "PASS",
+      "seconds": 0.693027
+    },
+    {
+      "check": "Run 3: batch 37",
+      "method": "POST",
+      "path": "/api/v1/samples/batch/",
+      "status": 201,
+      "content_encoding": "gzip",
+      "bytes": 1023,
+      "result": "PASS",
+      "seconds": 0.650104
+    },
+    {
+      "check": "Run 3: batch 38",
+      "method": "POST",
+      "path": "/api/v1/samples/batch/",
+      "status": 201,
+      "content_encoding": "gzip",
+      "bytes": 1023,
+      "result": "PASS",
+      "seconds": 0.600299
+    },
+    {
+      "check": "Run 3: batch 39",
+      "method": "POST",
+      "path": "/api/v1/samples/batch/",
+      "status": 201,
+      "content_encoding": "gzip",
+      "bytes": 1023,
+      "result": "PASS",
+      "seconds": 0.659737
+    },
+    {
+      "check": "Run 3: batch 40",
+      "method": "POST",
+      "path": "/api/v1/samples/batch/",
+      "status": 201,
+      "content_encoding": "gzip",
+      "bytes": 1023,
+      "result": "PASS",
+      "seconds": 0.664946
+    },
+    {
+      "check": "Run 3: batch 41",
+      "method": "POST",
+      "path": "/api/v1/samples/batch/",
+      "status": 201,
+      "content_encoding": "gzip",
+      "bytes": 1023,
+      "result": "PASS",
+      "seconds": 0.621519
+    },
+    {
+      "check": "Run 3: batch 42",
+      "method": "POST",
+      "path": "/api/v1/samples/batch/",
+      "status": 201,
+      "content_encoding": "gzip",
+      "bytes": 1023,
+      "result": "PASS",
+      "seconds": 0.623288
+    },
+    {
+      "check": "Run 3: batch 43",
+      "method": "POST",
+      "path": "/api/v1/samples/batch/",
+      "status": 201,
+      "content_encoding": "gzip",
+      "bytes": 1024,
+      "result": "PASS",
+      "seconds": 0.585741
+    },
+    {
+      "check": "Run 3: batch 44",
+      "method": "POST",
+      "path": "/api/v1/samples/batch/",
+      "status": 201,
+      "content_encoding": "gzip",
+      "bytes": 1223,
+      "result": "PASS",
+      "seconds": 1.100164
+    },
+    {
+      "check": "Run 3: batch 45",
+      "method": "POST",
+      "path": "/api/v1/samples/batch/",
+      "status": 201,
+      "content_encoding": "gzip",
+      "bytes": 1223,
+      "result": "PASS",
+      "seconds": 0.577693
+    },
+    {
+      "check": "Run 3: batch 46",
+      "method": "POST",
+      "path": "/api/v1/samples/batch/",
+      "status": 201,
+      "content_encoding": "gzip",
+      "bytes": 1223,
+      "result": "PASS",
+      "seconds": 0.573973
+    },
+    {
+      "check": "Run 3: batch 47",
+      "method": "POST",
+      "path": "/api/v1/samples/batch/",
+      "status": 201,
+      "content_encoding": "gzip",
+      "bytes": 1223,
+      "result": "PASS",
+      "seconds": 0.745343
+    },
+    {
+      "check": "Run 3: batch 48",
+      "method": "POST",
+      "path": "/api/v1/samples/batch/",
+      "status": 201,
+      "content_encoding": "gzip",
+      "bytes": 1223,
+      "result": "PASS",
+      "seconds": 0.575682
+    },
+    {
+      "check": "Run 3: batch 49",
+      "method": "POST",
+      "path": "/api/v1/samples/batch/",
+      "status": 201,
+      "content_encoding": "gzip",
+      "bytes": 1223,
+      "result": "PASS",
+      "seconds": 0.585958
+    },
+    {
+      "check": "Run 3: batch 50",
+      "method": "POST",
+      "path": "/api/v1/samples/batch/",
+      "status": 201,
+      "content_encoding": "gzip",
+      "bytes": 1223,
+      "result": "PASS",
+      "seconds": 0.961675
+    },
+    {
+      "check": "PATCH /api/v1/runs/3/",
+      "method": "PATCH",
+      "path": "/api/v1/runs/3/",
+      "status": 200,
+      "content_encoding": "gzip",
+      "bytes": 1384,
+      "result": "PASS",
+      "seconds": 0.382918
+    },
+    {
+      "check": "GET /api/v1/latest/?run_id=3",
+      "method": "GET",
+      "path": "/api/v1/latest/?run_id=3",
+      "status": 200,
+      "content_encoding": "gzip",
+      "bytes": 1433,
+      "result": "PASS",
+      "seconds": 0.857123
+    },
+    {
+      "check": "GET /api/v1/history/?run_id=3&limit=100",
+      "method": "GET",
+      "path": "/api/v1/history/?run_id=3&limit=100",
+      "status": 200,
+      "content_encoding": "gzip",
+      "bytes": 135382,
+      "result": "PASS",
+      "seconds": 0.42389
+    },
+    {
+      "check": "GET /api/v1/history/?run_id=3&downsample=500",
+      "method": "GET",
+      "path": "/api/v1/history/?run_id=3&downsample=500",
+      "status": 200,
+      "content_encoding": "gzip",
+      "bytes": 676113,
+      "result": "PASS",
+      "seconds": 0.583595
+    },
+    {
+      "check": "GET /api/v1/runs/3/stats/",
+      "method": "GET",
+      "path": "/api/v1/runs/3/stats/",
+      "status": 200,
+      "content_encoding": "gzip",
+      "bytes": 8142,
+      "result": "PASS",
+      "seconds": 1.365982
+    },
+    {
+      "check": "GET /api/v1/runs/3/tables/",
+      "method": "GET",
+      "path": "/api/v1/runs/3/tables/",
+      "status": 200,
+      "content_encoding": "gzip",
+      "bytes": 1469,
+      "result": "PASS",
+      "seconds": 0.525112
+    },
+    {
+      "check": "GET /runs/3/",
+      "method": "GET",
+      "path": "/runs/3/",
+      "status": 200,
+      "content_encoding": "gzip",
+      "bytes": 3058,
+      "result": "PASS",
+      "seconds": 0.402015
+    },
+    {
+      "check": "GET /runs/3/paper/",
+      "method": "GET",
+      "path": "/runs/3/paper/",
+      "status": 200,
+      "content_encoding": "gzip",
+      "bytes": 2630,
+      "result": "PASS",
+      "seconds": 0.375048
+    },
+    {
+      "check": "GET /compare/?run_id=3",
+      "method": "GET",
+      "path": "/compare/?run_id=3",
+      "status": 200,
+      "content_encoding": "gzip",
+      "bytes": 3053,
+      "result": "PASS",
+      "seconds": 0.377411
+    },
+    {
+      "check": "GET /system/",
+      "method": "GET",
+      "path": "/system/",
+      "status": 200,
+      "content_encoding": "gzip",
+      "bytes": 3050,
+      "result": "PASS",
+      "seconds": 0.433653
+    },
+    {
+      "check": "GET /api/v1/runs/3/export/",
+      "method": "GET",
+      "path": "/api/v1/runs/3/export/",
+      "status": 200,
+      "content_encoding": "identity",
+      "bytes": 4580823,
+      "result": "PASS",
+      "seconds": 1.726184
+    },
+    {
+      "check": "POST /api/v1/runs/3/lock/",
+      "method": "POST",
+      "path": "/api/v1/runs/3/lock/",
+      "status": 200,
+      "content_encoding": "gzip",
+      "bytes": 1559,
+      "result": "PASS",
+      "seconds": 1.764624
+    },
+    {
+      "check": "Run 3: locked metadata modification rejected",
+      "method": "PATCH",
+      "path": "/api/v1/runs/3/",
+      "status": 400,
+      "content_encoding": "identity",
+      "bytes": 93,
+      "result": "PASS",
+      "seconds": 0.424382
+    },
+    {
+      "check": "Run 3: locked sample ingestion rejected",
+      "method": "POST",
+      "path": "/api/v1/samples/",
+      "status": 400,
+      "content_encoding": "identity",
+      "bytes": 96,
+      "result": "PASS",
+      "seconds": 1.369331
+    },
+    {
+      "check": "GET /api/v1/runs/3/research-package/",
+      "method": "GET",
+      "path": "/api/v1/runs/3/research-package/",
+      "status": 200,
+      "content_encoding": "identity",
+      "result": "FAIL",
+      "seconds": 50.462239
+    }
+  ],
+  "result": "FAIL",
+  "health": {
+    "status": "ok",
+    "database": "ok"
+  },
+  "error": "The read operation timed out",
+  "finished_at": "2026-09-10T05:44:46.646307+00:00"
+}

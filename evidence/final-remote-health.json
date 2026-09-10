@@ -1,0 +1,25 @@
+{
+  "/health/": {
+    "status": 200,
+    "body": {
+      "status": "ok",
+      "database": "ok"
+    }
+  },
+  "/api/v1/status/": {
+    "status": 200,
+    "body": {
+      "webserver": "ok",
+      "database": "ok",
+      "database_vendor": "postgresql",
+      "sample_count": 0,
+      "latest_sensor_packet": null,
+      "latest_fpga_packet": null,
+      "latest_api_ingest_time": null,
+      "online": false,
+      "source": null,
+      "active_run": null,
+      "software_version": "bba24ea7ffb9ae4c9bb6657e1923e7603c655756"
+    }
+  }
+}

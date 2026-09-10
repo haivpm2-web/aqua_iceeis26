@@ -1,0 +1,155 @@
+{
+  "conclusion": "success",
+  "headSha": "bba24ea7ffb9ae4c9bb6657e1923e7603c655756",
+  "jobs": [
+    {
+      "completedAt": "2026-09-10T05:38:08Z",
+      "conclusion": "success",
+      "databaseId": 102758207815,
+      "name": "postgres-and-container",
+      "startedAt": "2026-09-10T05:37:18Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-09-10T05:37:19Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-09-10T05:37:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-10T05:37:35Z",
+          "conclusion": "success",
+          "name": "Initialize containers",
+          "number": 2,
+          "startedAt": "2026-09-10T05:37:19Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-10T05:37:37Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v4",
+          "number": 3,
+          "startedAt": "2026-09-10T05:37:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-10T05:37:37Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@v5",
+          "number": 4,
+          "startedAt": "2026-09-10T05:37:37Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-10T05:37:43Z",
+          "conclusion": "success",
+          "name": "Run pip install -r requirements.txt",
+          "number": 5,
+          "startedAt": "2026-09-10T05:37:37Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-10T05:37:43Z",
+          "conclusion": "success",
+          "name": "Run python manage.py check",
+          "number": 6,
+          "startedAt": "2026-09-10T05:37:43Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-10T05:37:44Z",
+          "conclusion": "success",
+          "name": "Run python manage.py makemigrations --check",
+          "number": 7,
+          "startedAt": "2026-09-10T05:37:43Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-10T05:37:45Z",
+          "conclusion": "success",
+          "name": "Run python manage.py migrate --noinput",
+          "number": 8,
+          "startedAt": "2026-09-10T05:37:44Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-10T05:37:46Z",
+          "conclusion": "success",
+          "name": "Run python manage.py collectstatic --noinput",
+          "number": 9,
+          "startedAt": "2026-09-10T05:37:45Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-10T05:37:51Z",
+          "conclusion": "success",
+          "name": "Run python manage.py test --verbosity 1",
+          "number": 10,
+          "startedAt": "2026-09-10T05:37:46Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-10T05:37:51Z",
+          "conclusion": "success",
+          "name": "Run python -m pip check",
+          "number": 11,
+          "startedAt": "2026-09-10T05:37:51Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-10T05:37:53Z",
+          "conclusion": "success",
+          "name": "Run node --check monitoring/static/monitoring/dashboard.js",
+          "number": 12,
+          "startedAt": "2026-09-10T05:37:51Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-10T05:38:04Z",
+          "conclusion": "success",
+          "name": "Production settings and actual Linux Gunicorn container",
+          "number": 13,
+          "startedAt": "2026-09-10T05:37:53Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-10T05:38:05Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-python@v5",
+          "number": 24,
+          "startedAt": "2026-09-10T05:38:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-10T05:38:05Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v4",
+          "number": 25,
+          "startedAt": "2026-09-10T05:38:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-10T05:38:05Z",
+          "conclusion": "success",
+          "name": "Stop containers",
+          "number": 26,
+          "startedAt": "2026-09-10T05:38:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-10T05:38:05Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 27,
+          "startedAt": "2026-09-10T05:38:05Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/haivpm2-web/aqua_iceeis26/actions/runs/34441801870/job/102758207815"
+    }
+  ],
+  "status": "completed",
+  "url": "https://github.com/haivpm2-web/aqua_iceeis26/actions/runs/34441801870"
+}

@@ -1,0 +1,180 @@
+[
+  {
+    "base_url": "https://aquaiceeis26-production.up.railway.app",
+    "run_ids": [
+      1,
+      3
+    ],
+    "source": "SIMULATED",
+    "started_at": "2026-09-10T05:44:48.924015+00:00",
+    "notice": "Application verification only; not physical experimental evidence."
+  },
+  {
+    "check": "100-sample window, PNG and CSV download",
+    "run_id": 3,
+    "csv": {
+      "rows": 10000,
+      "sources": {
+        "SIMULATED": 10000
+      }
+    },
+    "result": "PASS"
+  },
+  {
+    "path": "/",
+    "status": 200,
+    "chart_points": {
+      "do": 500,
+      "ph": 500,
+      "tds": 500,
+      "temperature": 500,
+      "diagnostics": 500
+    },
+    "seconds": 9.087818,
+    "result": "PASS"
+  },
+  {
+    "path": "/runs/",
+    "status": 200,
+    "chart_points": {},
+    "seconds": 1.211204,
+    "result": "PASS"
+  },
+  {
+    "path": "/live/",
+    "status": 200,
+    "chart_points": {
+      "do": 500,
+      "ph": 500,
+      "tds": 500,
+      "temperature": 500,
+      "diagnostics": 500
+    },
+    "seconds": 1.897467,
+    "result": "PASS"
+  },
+  {
+    "path": "/analysis/",
+    "status": 200,
+    "chart_points": {
+      "do": 500,
+      "ph": 500,
+      "tds": 500,
+      "temperature": 500,
+      "diagnostics": 500
+    },
+    "seconds": 1.575473,
+    "result": "PASS"
+  },
+  {
+    "path": "/compare/",
+    "status": 200,
+    "chart_points": {},
+    "seconds": 1.852361,
+    "result": "PASS"
+  },
+  {
+    "path": "/fpga/",
+    "status": 200,
+    "chart_points": {
+      "diagnostics": 500
+    },
+    "seconds": 1.698148,
+    "result": "PASS"
+  },
+  {
+    "path": "/events/",
+    "status": 200,
+    "chart_points": {},
+    "seconds": 1.165872,
+    "result": "PASS"
+  },
+  {
+    "check": "Paper screenshot, print, PDF and research ZIP",
+    "run_id": 3,
+    "research_package": {
+      "sha256": "c1867b8f0fbde7eb5ce2033294bbfe748a5e03bbf239eed57dad8be530d84830",
+      "dataset_sha256": "961c126e2c5b2dfe01cab5ee113b6d1634fdb4d815396461c41b67ef8a1dae79",
+      "members": 12,
+      "verified_hashes": 11,
+      "samples": {
+        "rows": 10000,
+        "sources": {
+          "SIMULATED": 10000
+        }
+      },
+      "bytes": 4487329
+    },
+    "result": "PASS"
+  },
+  {
+    "path": "/paper/",
+    "status": 200,
+    "chart_points": {
+      "do": 1000,
+      "ph": 1000,
+      "tds": 1000,
+      "temperature": 1000,
+      "diagnostics": 1000
+    },
+    "seconds": 6.581323,
+    "result": "PASS"
+  },
+  {
+    "path": "/system/",
+    "status": 200,
+    "chart_points": {},
+    "seconds": 0.659226,
+    "result": "PASS"
+  },
+  {
+    "path": "/runs/3/",
+    "status": 200,
+    "chart_points": {
+      "do": 500,
+      "ph": 500,
+      "tds": 500,
+      "temperature": 500,
+      "diagnostics": 500
+    },
+    "seconds": 2.16153,
+    "result": "PASS"
+  },
+  {
+    "path": "/runs/3/paper/",
+    "status": 200,
+    "chart_points": {
+      "do": 1000,
+      "ph": 1000,
+      "tds": 1000,
+      "temperature": 1000,
+      "diagnostics": 1000
+    },
+    "seconds": 1.873265,
+    "result": "PASS"
+  },
+  {
+    "path": "/admin/login/",
+    "status": 200,
+    "check": "Unauthenticated login form (no credential submission)",
+    "result": "PASS"
+  },
+  {
+    "path": "/health/",
+    "status": 200,
+    "body": {
+      "status": "ok",
+      "database": "ok"
+    },
+    "result": "PASS"
+  },
+  {
+    "result": "FAIL",
+    "error": "Mobile horizontal overflow"
+  },
+  {
+    "result": "FAIL",
+    "check": "Overall browser verification",
+    "finished_at": "2026-09-10T05:45:23.710996+00:00"
+  }
+]

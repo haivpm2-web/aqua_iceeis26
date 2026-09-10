@@ -250,9 +250,9 @@ Paper view preserves experiment source labels. PNG filenames identify the run/so
 
 ## Railway deployment
 
-**Configuration is supplied; no Railway deployment is claimed.** The Docker image uses Python 3.12, a non-root application user, Gunicorn and WhiteNoise. Application dependencies are pinned to the installed direct-package versions; transitive dependencies and the base image are not fully locked.
+**Deployed:** [production dashboard](https://aquaiceeis26-production.up.railway.app) with Railway PostgreSQL. See [final release results](FINAL_RELEASE_REPORT.md) and [deployment evidence](RAILWAY_DEPLOYMENT_REPORT.md). The Docker image uses Python 3.12, a non-root application user, Gunicorn and WhiteNoise. Application dependencies are pinned to the installed direct-package versions; transitive dependencies and the base image are not fully locked.
 
-Railway's legacy configuration file is retained only as `docs/railway.legacy.json`. New deployments use actual service settings from `docs/railway-service-settings.json`, applied through the supported Railway public API (`scripts/configure_railway.graphql`) or the dashboard. No deployment relies on the deprecated root `railway.json` mechanism. See [Railway configuration documentation](https://docs.railway.com/config-as-code).
+Railway's legacy configuration file is retained only as `docs/railway.legacy.json`. New deployments use actual service settings from `docs/railway-service-settings.json`, applied through the supported Railway public API (`scripts/configure_railway.graphql`) or the dashboard. This release applies service settings directly; the archived example is not loaded at runtime. See [Railway configuration documentation](https://docs.railway.com/config-as-code).
 
 1. Create a Railway project with a PostgreSQL service and this repository as a web service. Set the repository root containing `Dockerfile` as the service root and use Dockerfile build detection.
 2. Generate a public web domain. Configure the web service variables shown below. Replace the database service name `Postgres` if yours differs.
@@ -279,7 +279,7 @@ Railway injects `PORT`. Its health checker uses host `healthcheck.railway.app`, 
 
 Migrations use PostgreSQL during pre-deploy. Static collection stays in the application start command because Railway pre-deploy filesystem changes do not persist to the running container. See [Railway pre-deploy execution](https://docs.railway.com/guides/pre-deploy-command). Cross-service variable syntax is documented in [Railway variables](https://docs.railway.com/reference/variables).
 
-Do not use ephemeral container SQLite for production records. Production settings require secure cookies, HTTPS redirection, a strong secret and PostgreSQL when running on Railway. Obtain an actual successful remote deployment and database/HTTP verification before describing the server as deployed.
+Do not use ephemeral container SQLite for production records. Production settings require secure cookies, HTTPS redirection, a strong secret and PostgreSQL when running on Railway. The release reports record the actual deployment and database/HTTP verification; rerun those checks after configuration changes.
 
 ## Inputs still needed from the experiment
 

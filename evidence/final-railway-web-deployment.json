@@ -1,0 +1,64 @@
+{
+  "id": "e8f6f08e-5921-4139-bd07-cb3e1d4c4cfd",
+  "status": "SUCCESS",
+  "createdAt": "2026-09-10T05:38:30.223Z",
+  "meta": {
+    "branch": "main",
+    "buildOnly": false,
+    "commitAuthor": "haivpm2-web",
+    "commitHash": "bba24ea7ffb9ae4c9bb6657e1923e7603c655756",
+    "commitMessage": "Complete ICEEIS 2026 aquaculture research webserver",
+    "duration": 1,
+    "fileServiceManifest": {},
+    "ignoreWatchPatterns": false,
+    "imageDigest": "sha256:83d85934265f9e3c19d0d0b4ee20e596b2534beeaa4fdc3f426076b960ad3e4e",
+    "logsV2": true,
+    "nixpacksProviders": [],
+    "plan": "hobby",
+    "propertyFileMapping": {},
+    "reason": "deploy",
+    "repo": "haivpm2-web/aqua_iceeis26",
+    "rootDirectory": null,
+    "runtime": "V2",
+    "serviceManifest": {
+      "build": {
+        "buildCommand": null,
+        "buildEnvironment": "V3",
+        "builder": "DOCKERFILE",
+        "dockerfilePath": "Dockerfile",
+        "nixpacksConfigPath": null,
+        "nixpacksPlan": null,
+        "watchPatterns": []
+      },
+      "deploy": {
+        "cronSchedule": null,
+        "drainingSeconds": null,
+        "healthcheckPath": "/health/",
+        "healthcheckTimeout": 120,
+        "ipv6EgressEnabled": false,
+        "limitOverride": null,
+        "multiRegionConfig": {
+          "europe-west4-drams3a": {
+            "numReplicas": 1
+          }
+        },
+        "numReplicas": 1,
+        "overlapSeconds": null,
+        "preDeployCommand": [
+          "python manage.py migrate --noinput"
+        ],
+        "preDeployTimeoutSeconds": null,
+        "region": null,
+        "registryCredentials": null,
+        "requiredMountPath": null,
+        "restartPolicyMaxRetries": 3,
+        "restartPolicyType": "ON_FAILURE",
+        "runtime": "V2",
+        "sleepApplication": false,
+        "startCommand": null,
+        "useLegacyStacker": false
+      }
+    },
+    "volumeMounts": []
+  }
+}

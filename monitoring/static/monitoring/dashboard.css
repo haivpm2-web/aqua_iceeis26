@@ -152,6 +152,7 @@ button:hover,
   background: #e2eef2;
   border-left: 3px solid var(--accent);
   font-size: 12px;
+  overflow-wrap: anywhere;
 }
 .source.simulated {
   background: #fff3d9;

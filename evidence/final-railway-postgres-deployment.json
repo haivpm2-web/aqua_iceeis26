@@ -1,0 +1,53 @@
+{
+  "id": "f9cd4e31-83a0-487f-8d28-dcf35c9aee2d",
+  "status": "SUCCESS",
+  "createdAt": "2026-09-10T05:34:04.392Z",
+  "meta": {
+    "image": "ghcr.io/railwayapp-templates/postgres-ssl:18",
+    "imageDigest": "sha256:469c779c7c57ec6bad4670a0a3cb5a830aa6e0ce4f3707137608de5223a5041c",
+    "logsV2": true,
+    "patchId": "b3c6678d-39de-406f-aae2-3a539f4fed43",
+    "reason": "deploy",
+    "runtime": "V2",
+    "serviceManifest": {
+      "build": {
+        "buildCommand": null,
+        "buildEnvironment": "V3",
+        "builder": "RAILPACK",
+        "dockerfilePath": null,
+        "nixpacksConfigPath": null,
+        "nixpacksPlan": null,
+        "watchPatterns": []
+      },
+      "deploy": {
+        "cronSchedule": null,
+        "drainingSeconds": null,
+        "healthcheckPath": null,
+        "healthcheckTimeout": null,
+        "ipv6EgressEnabled": false,
+        "limitOverride": null,
+        "multiRegionConfig": {
+          "europe-west4-drams3a": {
+            "numReplicas": 1
+          }
+        },
+        "numReplicas": 1,
+        "overlapSeconds": null,
+        "preDeployCommand": null,
+        "preDeployTimeoutSeconds": null,
+        "region": null,
+        "registryCredentials": null,
+        "requiredMountPath": "/var/lib/postgresql/data",
+        "restartPolicyMaxRetries": 10,
+        "restartPolicyType": "ON_FAILURE",
+        "runtime": "V2",
+        "sleepApplication": false,
+        "startCommand": null,
+        "useLegacyStacker": false
+      }
+    },
+    "volumeMounts": [
+      "/var/lib/postgresql/data"
+    ]
+  }
+}

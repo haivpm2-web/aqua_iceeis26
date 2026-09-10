@@ -1,0 +1,44 @@
+{
+  "result": "PASS",
+  "scope": "Required remote API/ingestion/export/integrity checks across recorded attempts; individual driver failures remain recorded",
+  "base_url": "https://aquaiceeis26-production.up.railway.app",
+  "verified_at": "2026-09-10T05:47:12.433602+00:00",
+  "source": "SIMULATED",
+  "runs": [
+    {
+      "id": 1,
+      "sample_count": 1000,
+      "result": "PASS",
+      "http_ingestion": {
+        "seconds": 3.195889,
+        "batches": 5,
+        "batch_size": 200,
+        "meaning": "HTTP/application timing only; not FPGA throughput"
+      },
+      "evidence": "final-remote-initial-attempt.json"
+    },
+    {
+      "id": 3,
+      "sample_count": 10000,
+      "result": "PASS",
+      "http_ingestion": {
+        "seconds": 38.331178,
+        "batches": 50,
+        "batch_size": 200,
+        "meaning": "HTTP/application timing only; not FPGA throughput"
+      },
+      "evidence": [
+        "final-remote-retry-attempt.json",
+        "final-remote-package-recheck.json"
+      ],
+      "recovery": "Ingestion/statistics/CSV/lock checks passed in the driver; ZIP download timed out in Python and subsequently passed twice using curl with full hash verification."
+    }
+  ],
+  "retained_partial_run": {
+    "id": 2,
+    "status": "FAILED",
+    "sample_count": 400,
+    "reason": "Client TLS handshake timeout during initial ingestion attempt"
+  },
+  "notice": "Application verification only; no measured sensor/FPGA results."
+}

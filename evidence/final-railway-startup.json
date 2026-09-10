@@ -1,0 +1,118 @@
+[
+  {
+    "timestamp": "2026-09-10T05:39:17.986254055Z",
+    "message": "  Applying auth.0009_alter_user_last_name_max_length... OK"
+  },
+  {
+    "timestamp": "2026-09-10T05:39:17.986267835Z",
+    "message": "  Applying auth.0010_alter_group_name_max_length... OK"
+  },
+  {
+    "timestamp": "2026-09-10T05:39:17.986278375Z",
+    "message": "  Applying auth.0011_update_proxy_permissions... OK"
+  },
+  {
+    "timestamp": "2026-09-10T05:39:17.986321924Z",
+    "message": "  Applying contenttypes.0001_initial... OK"
+  },
+  {
+    "timestamp": "2026-09-10T05:39:17.986329564Z",
+    "message": "  Applying auth.0001_initial... OK"
+  },
+  {
+    "timestamp": "2026-09-10T05:39:17.986333684Z",
+    "message": "  Applying admin.0001_initial... OK"
+  },
+  {
+    "timestamp": "2026-09-10T05:39:17.986338144Z",
+    "message": "  Applying admin.0002_logentry_remove_auto_add... OK"
+  },
+  {
+    "timestamp": "2026-09-10T05:39:17.986342644Z",
+    "message": "  Applying admin.0003_logentry_add_action_flag_choices... OK"
+  },
+  {
+    "timestamp": "2026-09-10T05:39:17.986346504Z",
+    "message": "  Applying contenttypes.0002_remove_content_type_name... OK"
+  },
+  {
+    "timestamp": "2026-09-10T05:39:17.986351034Z",
+    "message": "  Applying auth.0002_alter_permission_name_max_length... OK"
+  },
+  {
+    "timestamp": "2026-09-10T05:39:17.986354934Z",
+    "message": "  Applying auth.0003_alter_user_email_max_length... OK"
+  },
+  {
+    "timestamp": "2026-09-10T05:39:17.986358324Z",
+    "message": "  Applying auth.0004_alter_user_username_opts... OK"
+  },
+  {
+    "timestamp": "2026-09-10T05:39:17.986362124Z",
+    "message": "  Applying auth.0005_alter_user_last_login_null... OK"
+  },
+  {
+    "timestamp": "2026-09-10T05:39:17.986365944Z",
+    "message": "  Applying auth.0006_require_contenttypes_0002... OK"
+  },
+  {
+    "timestamp": "2026-09-10T05:39:17.986369904Z",
+    "message": "  Applying auth.0007_alter_validators_add_error_messages... OK"
+  },
+  {
+    "timestamp": "2026-09-10T05:39:17.986373923Z",
+    "message": "  Applying auth.0008_alter_user_username_max_length... OK"
+  },
+  {
+    "timestamp": "2026-09-10T05:39:17.986380143Z",
+    "message": "  Applying auth.0012_alter_user_first_name_max_length... OK"
+  },
+  {
+    "timestamp": "2026-09-10T05:39:17.986384523Z",
+    "message": "  Applying monitoring.0001_initial... OK"
+  },
+  {
+    "timestamp": "2026-09-10T05:39:18.025939725Z",
+    "message": "  Applying monitoring.0002_experimentrun_accumulator_q_format_and_more... OK"
+  },
+  {
+    "timestamp": "2026-09-10T05:39:18.025944195Z",
+    "message": "  Applying sessions.0001_initial... OK"
+  },
+  {
+    "timestamp": "2026-09-10T05:39:24.064468797Z",
+    "message": "168 static files copied to '/app/staticfiles', 484 post-processed."
+  },
+  {
+    "timestamp": "2026-09-10T05:39:24.064472347Z",
+    "message": "[2026-09-10 05:39:24 +0000] [1] [INFO] Starting gunicorn 24.0.0"
+  },
+  {
+    "timestamp": "2026-09-10T05:39:24.064474817Z",
+    "message": "[2026-09-10 05:39:24 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)"
+  },
+  {
+    "timestamp": "2026-09-10T05:39:24.064478937Z",
+    "message": "[2026-09-10 05:39:24 +0000] [1] [INFO] Using worker: sync"
+  },
+  {
+    "timestamp": "2026-09-10T05:39:24.064481617Z",
+    "message": "[2026-09-10 05:39:24 +0000] [35] [INFO] Booting worker with pid: 35"
+  },
+  {
+    "timestamp": "2026-09-10T05:39:24.064485597Z",
+    "message": "[2026-09-10 05:39:24 +0000] [36] [INFO] Booting worker with pid: 36"
+  },
+  {
+    "timestamp": "2026-09-10T05:39:24.681991903Z",
+    "message": "100.64.0.2 - - [10/Sep/2026:05:39:24 +0000] \"GET /health/ HTTP/1.1\" 200 34 \"-\" \"RailwayHealthCheck/1.0\""
+  },
+  {
+    "timestamp": "2026-09-10T05:39:54.682779201Z",
+    "message": "100.64.0.3 - - [10/Sep/2026:05:39:45 +0000] \"GET /health/ HTTP/1.1\" 200 34 \"-\" \"Python-urllib/3.14\""
+  },
+  {
+    "timestamp": "2026-09-10T05:39:54.682789541Z",
+    "message": "100.64.0.5 - - [10/Sep/2026:05:39:49 +0000] \"GET /health/ HTTP/1.1\" 200 34 \"-\" \"aqua-iceeis26-release-verification\""
+  }
+]

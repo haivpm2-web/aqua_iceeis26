@@ -1,0 +1,21 @@
+{
+  "result": "PASS",
+  "run_id": 3,
+  "source": "SIMULATED",
+  "sample_count": 10000,
+  "method": "Two independent HTTP GET downloads with curl; ZIP members verified using verify_package; hashes matched each other and stored locked-run hashes",
+  "package": {
+    "sha256": "c1867b8f0fbde7eb5ce2033294bbfe748a5e03bbf239eed57dad8be530d84830",
+    "dataset_sha256": "961c126e2c5b2dfe01cab5ee113b6d1634fdb4d815396461c41b67ef8a1dae79",
+    "members": 12,
+    "verified_hashes": 11,
+    "samples": {
+      "rows": 10000,
+      "sources": {
+        "SIMULATED": 10000
+      }
+    },
+    "bytes": 4487329
+  },
+  "notice": "Application verification only. No physical FPGA or sensor measurements."
+}
