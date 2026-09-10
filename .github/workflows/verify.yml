@@ -1,0 +1,46 @@
+name: Research release verification
+on: [push, pull_request, workflow_dispatch]
+jobs:
+  postgres-and-container:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:17
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: ci-test-only
+          POSTGRES_DB: iceeis_ci
+        ports: ['5432:5432']
+        options: >-
+          --health-cmd "pg_isready -U postgres"
+          --health-interval 5s --health-timeout 5s --health-retries 12
+    env:
+      DEBUG: 'true'
+      DATABASE_URL: postgresql://postgres:ci-test-only@127.0.0.1:5432/iceeis_ci
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements.txt
+      - run: python manage.py check
+      - run: python manage.py makemigrations --check
+      - run: python manage.py migrate --noinput
+      - run: python manage.py collectstatic --noinput
+      - run: python manage.py test --verbosity 1
+      - run: python -m pip check
+      - run: node --check monitoring/static/monitoring/dashboard.js
+      - name: Production settings and actual Linux Gunicorn container
+        shell: bash
+        run: |
+          export DEBUG=false
+          export SECRET_KEY="$(python -c 'import secrets; print(secrets.token_urlsafe(64))')"
+          python manage.py check --deploy
+          docker build -t aqua-iceeis26-ci .
+          docker run -d --name aqua-ci --network host -e DEBUG -e SECRET_KEY -e DATABASE_URL -e ALLOWED_HOSTS=127.0.0.1,localhost -e PORT=8000 aqua-iceeis26-ci
+          for attempt in $(seq 1 30); do
+            if curl --fail --silent http://127.0.0.1:8000/health/; then exit 0; fi
+            sleep 2
+          done
+          docker logs aqua-ci
+          exit 1

@@ -1,0 +1,25 @@
+{% load static %}
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ title }} · Aquaculture Research</title>
+<link rel="stylesheet" href="{% static 'monitoring/dashboard.css' %}">
+<script defer src="{% static 'monitoring/vendor/chart.umd.min.js' %}"></script>
+<script defer src="{% static 'monitoring/dashboard.js' %}"></script>
+</head><body data-page="{{ page }}" class="{% if paper %}paper{% endif %}">
+{% if not paper %}<aside><a class="brand" href="/">AQ <span>RESEARCH<br><small>ICEEIS 2026</small></span></a>
+<nav aria-label="Main navigation"><a href="/">Dashboard</a><a href="/runs/">Experiments</a><a href="/live/">Live Data</a><a href="/analysis/">Analysis</a><a href="/compare/">Compare</a><a href="/fpga/">FPGA</a><a href="/events/">Events</a><a href="/paper/">Paper View</a><a href="/system/">System</a><a href="/admin/">Admin</a></nav>
+<p class="aside-note">STM32F411 → Artix-7<br>Edge denoising observatory</p></aside>{% endif %}
+<main><header><div><p class="eyebrow">WATER QUALITY / EXPERIMENT OBSERVATORY</p><h1>{% if paper %}FPGA-Based Aquaculture Water-Quality Monitoring{% else %}{{ title }}{% endif %}</h1><p class="muted">Raw signals, adaptive filtering, and reproducible experimental evidence.</p></div><span id="connection" class="badge">Connecting</span></header>
+<section class="toolbar" aria-label="Display controls"><label>Experiment<select id="run"><option value="">Select experiment</option>{% for run in runs %}<option value="{{ run.pk }}" {% if selected.pk == run.pk %}selected{% endif %}>#{{ run.pk }} · {{ run.run_name }} · {{ run.source }}</option>{% endfor %}</select></label>
+<label>Visible samples<select id="window"><option>100</option><option selected>500</option><option>1000</option><option>5000</option></select></label>
+<label>Window<select id="scope"><option value="recent">Most recent</option><option value="all">Whole run (downsampled)</option></select></label>
+<label>Start (local time)<input id="start" type="datetime-local" step="1"></label><label>End (local time)<input id="end" type="datetime-local" step="1"></label>
+<button id="refresh">Refresh</button><a id="csv" class="button" hidden>Export samples</a><a id="tables-csv" class="button" hidden>Export tables</a><a id="research-package" class="button" hidden>Research ZIP</a>{% if paper %}<button id="print">Print / PDF</button>{% endif %}</section>
+<p id="source" class="source">Select an experiment to display recorded data.</p><p id="error" role="alert" hidden></p>
+<section id="cards" class="cards"></section>
+<section id="charts" class="charts"></section>
+<section id="content"></section>
+{% if user.is_staff and not paper %}<section class="panel"><h2>Finalize selected experiment</h2><form id="lock-run">{% csrf_token %}<p>Complete the run and review its scientific metadata before locking. Locked evidence cannot be edited; a superuser must explicitly unlock it with a reason.</p><button>Lock completed run and generate integrity hashes</button></form></section>{% endif %}
+{% if page == 'runs' %}<section class="panel"><h2>Create experiment</h2>{% if user.is_staff %}<form id="create-run">{% csrf_token %}<label>Name<input name="run_name" required maxlength="200"></label><label>Type<select name="run_type"><option>REAL_WORLD</option><option>STABLE</option><option>INTERVENTION</option><option>SYNTHETIC</option><option>IMPULSE</option><option>MIXED_NOISE</option><option>HIL</option><option>CALIBRATION</option><option>OTHER</option></select></label><label>Source<select name="source"><option>REAL</option><option>HIL</option><option>SIMULATED</option></select></label><label>Filter version<input name="filter_version"></label><button>Create run</button></form>{% else %}<p><a href="/admin/login/?next=/runs/">Sign in as staff</a> to create experiments and import data. Gateway writes use bearer authentication.</p>{% endif %}</section>{% endif %}
+{% if page == 'detail' or page == 'runs' %}{% if user.is_staff %}<section class="panel"><h2>Import CSV into selected experiment</h2><form id="import-csv">{% csrf_token %}<input type="file" name="file" accept=".csv" required><label>Column mapping (CSV column → field)<textarea name="mapping" rows="2">{}</textarea></label><button>Import</button></form><pre id="import-report"></pre></section>{% endif %}{% endif %}
+<footer>Population SD and variance · Unscaled MAD · Reference-dependent metrics require aligned ground truth.<br>Statistics use all samples in the selected time interval (the full run when no dates are selected); chart sample limits affect display only. Red markers: outlier flags. Amber markers: transient flags.<br>Missing experimental inputs are shown as N/A. Simulated data are for interface validation only.</footer></main></body></html>

@@ -1,0 +1,183 @@
+[
+  {
+    "base_url": "http://127.0.0.1:8000",
+    "run_ids": [
+      3,
+      4,
+      5
+    ],
+    "source": "SIMULATED",
+    "started_at": "2026-09-10T05:35:16.023038+00:00",
+    "notice": "Application verification only; not physical experimental evidence."
+  },
+  {
+    "check": "100-sample window, PNG and CSV download",
+    "run_id": 5,
+    "csv": {
+      "rows": 50000,
+      "sources": {
+        "SIMULATED": 50000
+      }
+    },
+    "result": "PASS"
+  },
+  {
+    "path": "/",
+    "status": 200,
+    "chart_points": {
+      "do": 500,
+      "ph": 500,
+      "tds": 500,
+      "temperature": 500,
+      "diagnostics": 500
+    },
+    "seconds": 9.011099,
+    "result": "PASS"
+  },
+  {
+    "path": "/runs/",
+    "status": 200,
+    "chart_points": {},
+    "seconds": 0.168077,
+    "result": "PASS"
+  },
+  {
+    "path": "/live/",
+    "status": 200,
+    "chart_points": {
+      "do": 500,
+      "ph": 500,
+      "tds": 500,
+      "temperature": 500,
+      "diagnostics": 500
+    },
+    "seconds": 2.956268,
+    "result": "PASS"
+  },
+  {
+    "path": "/analysis/",
+    "status": 200,
+    "chart_points": {
+      "do": 500,
+      "ph": 500,
+      "tds": 500,
+      "temperature": 500,
+      "diagnostics": 500
+    },
+    "seconds": 0.39573,
+    "result": "PASS"
+  },
+  {
+    "path": "/compare/",
+    "status": 200,
+    "chart_points": {},
+    "seconds": 0.429563,
+    "result": "PASS"
+  },
+  {
+    "path": "/fpga/",
+    "status": 200,
+    "chart_points": {
+      "diagnostics": 500
+    },
+    "seconds": 0.305241,
+    "result": "PASS"
+  },
+  {
+    "path": "/events/",
+    "status": 200,
+    "chart_points": {},
+    "seconds": 0.15676,
+    "result": "PASS"
+  },
+  {
+    "check": "Paper screenshot, print, PDF and research ZIP",
+    "run_id": 5,
+    "research_package": {
+      "sha256": "56a6d344064b266ce7a5557d38226df4bb5008ad28c9b4e484315c2824961efb",
+      "dataset_sha256": "9373ad4e31da5cbe9270b03e1424692d467d7b342ce81b283eee2672f311eede",
+      "members": 12,
+      "verified_hashes": 11,
+      "samples": {
+        "rows": 50000,
+        "sources": {
+          "SIMULATED": 50000
+        }
+      },
+      "bytes": 22456913
+    },
+    "result": "PASS"
+  },
+  {
+    "path": "/paper/",
+    "status": 200,
+    "chart_points": {
+      "do": 1000,
+      "ph": 1000,
+      "tds": 1000,
+      "temperature": 1000,
+      "diagnostics": 1000
+    },
+    "seconds": 25.05079,
+    "result": "PASS"
+  },
+  {
+    "path": "/system/",
+    "status": 200,
+    "chart_points": {},
+    "seconds": 0.161685,
+    "result": "PASS"
+  },
+  {
+    "path": "/runs/5/",
+    "status": 200,
+    "chart_points": {
+      "do": 500,
+      "ph": 500,
+      "tds": 500,
+      "temperature": 500,
+      "diagnostics": 500
+    },
+    "seconds": 14.245145,
+    "result": "PASS"
+  },
+  {
+    "path": "/runs/5/paper/",
+    "status": 200,
+    "chart_points": {
+      "do": 1000,
+      "ph": 1000,
+      "tds": 1000,
+      "temperature": 1000,
+      "diagnostics": 1000
+    },
+    "seconds": 1.226793,
+    "result": "PASS"
+  },
+  {
+    "path": "/admin/login/",
+    "status": 200,
+    "check": "Unauthenticated login form (no credential submission)",
+    "result": "PASS"
+  },
+  {
+    "path": "/health/",
+    "status": 200,
+    "body": {
+      "status": "ok",
+      "database": "ok"
+    },
+    "result": "PASS"
+  },
+  {
+    "check": "Mobile 390x844, JavaScript runtime and API requests",
+    "errors": [],
+    "api_failures": [],
+    "result": "PASS"
+  },
+  {
+    "result": "PASS",
+    "check": "Overall browser verification",
+    "finished_at": "2026-09-10T05:36:26.431328+00:00"
+  }
+]

@@ -1,0 +1,111 @@
+[
+  {
+    "path": "/",
+    "status": 200,
+    "chart_points": {
+      "do": 500,
+      "ph": 500,
+      "tds": 500,
+      "temperature": 500,
+      "diagnostics": 500
+    },
+    "result": "PASS"
+  },
+  {
+    "path": "/runs/",
+    "status": 200,
+    "chart_points": {},
+    "result": "PASS"
+  },
+  {
+    "path": "/live/",
+    "status": 200,
+    "chart_points": {
+      "do": 500,
+      "ph": 500,
+      "tds": 500,
+      "temperature": 500,
+      "diagnostics": 500
+    },
+    "result": "PASS"
+  },
+  {
+    "path": "/analysis/",
+    "status": 200,
+    "chart_points": {
+      "do": 500,
+      "ph": 500,
+      "tds": 500,
+      "temperature": 500,
+      "diagnostics": 500
+    },
+    "result": "PASS"
+  },
+  {
+    "path": "/compare/",
+    "status": 200,
+    "chart_points": {},
+    "result": "PASS"
+  },
+  {
+    "path": "/fpga/",
+    "status": 200,
+    "chart_points": {
+      "diagnostics": 500
+    },
+    "result": "PASS"
+  },
+  {
+    "path": "/events/",
+    "status": 200,
+    "chart_points": {},
+    "result": "PASS"
+  },
+  {
+    "path": "/paper/",
+    "status": 200,
+    "chart_points": {
+      "do": 1000,
+      "ph": 1000,
+      "tds": 1000,
+      "temperature": 1000,
+      "diagnostics": 1000
+    },
+    "result": "PASS"
+  },
+  {
+    "path": "/system/",
+    "status": 200,
+    "chart_points": {},
+    "result": "PASS"
+  },
+  {
+    "path": "/runs/2/",
+    "status": 200,
+    "chart_points": {
+      "do": 500,
+      "ph": 500,
+      "tds": 500,
+      "temperature": 500,
+      "diagnostics": 500
+    },
+    "result": "PASS"
+  },
+  {
+    "path": "/runs/2/paper/",
+    "status": 200,
+    "chart_points": {
+      "do": 1000,
+      "ph": 1000,
+      "tds": 1000,
+      "temperature": 1000,
+      "diagnostics": 1000
+    },
+    "result": "PASS"
+  },
+  {
+    "check": "Mobile layout and JavaScript runtime",
+    "errors": [],
+    "result": "PASS"
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "builder": "RAILPACK",
+  "dockerfilePath": "Dockerfile",
+  "preDeployCommand": [
+    "python manage.py migrate --noinput"
+  ],
+  "healthcheckPath": "/health/",
+  "healthcheckTimeout": 120,
+  "restartPolicyType": "ON_FAILURE",
+  "restartPolicyMaxRetries": 3,
+  "sleepApplication": false,
+  "railwayConfigFile": null
+}
