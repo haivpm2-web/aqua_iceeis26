@@ -1,0 +1,14 @@
+{
+  "projectId": "711fa77a-a6c4-4180-8c5d-ab75c22c7ee1",
+  "environmentId": "af9aa5a6-dcac-402f-b4e3-dc0fef91c010",
+  "serviceId": "5dce9cce-8309-46c8-8d18-f72d522c383e",
+  "deploymentId": "6be21a27-d191-4941-9dac-84ec8d1d6f86",
+  "status": "SUCCESS",
+  "createdAt": "2026-09-10T13:59:31.923Z",
+  "commitHash": "7679b9991d968ec62495ee9c3212d11b706b633a",
+  "imageDigest": "sha256:2e77c3ad58a5fc6d822558a9485903e7080ba339966761a03493f874de60364b",
+  "builder": "DOCKERFILE",
+  "dockerfilePath": "Dockerfile",
+  "healthcheckPath": "/health/",
+  "publicUrl": "https://aquaiceeis26-production.up.railway.app"
+}

@@ -1,0 +1,26 @@
+{
+  "baseUrl": "https://aquaiceeis26-production.up.railway.app",
+  "health": {
+    "httpStatus": 200,
+    "status": "ok",
+    "database": "ok"
+  },
+  "applicationStatus": {
+    "httpStatus": 200,
+    "webserver": "ok",
+    "database": "ok",
+    "database_vendor": "postgresql",
+    "sample_count": 11400,
+    "source": "SIMULATED",
+    "active_run": null,
+    "software_version": "7679b9991d968ec62495ee9c3212d11b706b633a"
+  },
+  "lockedVerificationRun": {
+    "id": 3,
+    "source": "SIMULATED",
+    "status": "LOCKED",
+    "sample_count": 10000,
+    "dataset_sha256": "961c126e2c5b2dfe01cab5ee113b6d1634fdb4d815396461c41b67ef8a1dae79",
+    "research_package_sha256": "c1867b8f0fbde7eb5ce2033294bbfe748a5e03bbf239eed57dad8be530d84830"
+  }
+}
